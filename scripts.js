@@ -1,78 +1,20 @@
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-	type: 'bar',
-	data: {
-		labels: ['Sökande idag'],
-		datasets: [{
-			label: 'Akutmed',
-			data: [24],
-			backgroundColor: [
-				'rgba(255,99,132,0.8)'
-
-			]
-		},{
-			label: 'Ortoped',
-			data: [25],
-			backgroundColor: [
-				'rgba(15,99,132,0.8)'
-			]
-		},{
-			label: 'Kirurg',
-			data: [84],
-			backgroundColor: [
-				'rgba(15,99,250,0.8)'
-			]
-		},{
-			label: 'Totalt',
-			data: [125],
-			backgroundColor: [
-				'rgba(250,209,132,0.8)'
-			]
-		}],
-	},
-	options:{
-		scales:{
-			yAxes:[{
-				ticks:{
-					beginAtZero:true
-				}
-			}]
-
-		}
-	}
-});
 var ctx = document.getElementById('myChart2');
 var myChart = new Chart(ctx, {
-	type: 'bar',
+	type: 'doughnut',
 	data: {
-		labels: ['Sökande idag'],
+		labels: ['Sökande idag','Sökande igår','Sökande just nu'],
 		datasets: [{
 			label: 'Akutmed',
-			data: [24],
+			data: [24,25,26],
 			backgroundColor: [
-				'rgba(255,99,132,0.8)'
-
-			]
-		},{
-			label: 'Ortoped',
-			data: [25],
-			backgroundColor: [
-				'rgba(15,99,132,0.8)'
-			]
-		},{
-			label: 'Kirurg',
-			data: [84],
-			backgroundColor: [
-				'rgba(15,99,250,0.8)'
-			]
-		},{
-			label: 'Totalt',
-			data: [125],
-			backgroundColor: [
-				'rgba(250,209,132,0.8)'
-			]
-		}],
-	},
+				'rgba(100,99,132,0.8)',
+				'rgba(150,99,132,0.8)',
+				'rgba(250,99,132,0.8)'
+			],
+			borderWidth: 1,
+			borderColor:'rgba(0,0,0,1)',
+			weight:1
+		}]},
 	options:{
 		scales:{
 			yAxes:[{
